@@ -1,0 +1,69 @@
+<div class="form-wrapper">
+  <form (ngSubmit)="onSubmit()" #myform="ngForm">
+    <div class="input-field">
+      <label for="firstname">Firstname</label>
+      <input
+        type="text"
+        id="firstname"
+        class="form-control"
+        ngModel
+        #firstname="ngModel"
+        name="firstname"
+        required
+        class="validate"
+      />
+      <span class="helper-text" *ngIf="!firstname.valid && firstname.touched"
+        >Required!</span
+      >
+    </div>
+    <div class="input-field">
+      <label for="lastname">Lastname</label>
+      <input
+        type="text"
+        id="lastname"
+        class="form-control"
+        ngModel
+        #lastname="ngModel"
+        name="lastname"
+        required
+        class="validate"
+      />
+      <span class="helper-text" *ngIf="!lastname.valid && lastname.touched"
+        >Required!</span
+      >
+    </div>
+    <div class="status-group">
+      <label for="status">Status</label>
+      <select
+        class="browser-default"
+        id="status"
+        [ngModel]="status[0]"
+        name="status"
+        required
+      >
+        <option *ngFor="let stat of status" [value]="stat">{{ stat }}</option>
+      </select>
+    </div>
+    <div *ngFor="let gender of genders">
+      <label>
+        <input
+          class="with-gap"
+          name="gender"
+          type="radio"
+          [ngModel]="genders[0]"
+          [value]="gender"
+        />
+        <span>{{ gender }}</span>
+      </label>
+    </div>
+    <div class="submit">
+      <button
+        *ngIf="myform.valid"
+        class="btn waves-effect waves-light"
+        type="submit"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+.form-wrapper {
+  border: 1px solid rgba(143, 143, 143, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  .helper-text {
+    font-size: 0.8rem;
+    color: rgb(190, 190, 190);
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+  }
+
+  .status-group {
+    margin-bottom: 2rem;
+  }
+
+  .submit {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 2rem;
+    button {
+      display: inline-block !important;
+    }
+  }
+}
