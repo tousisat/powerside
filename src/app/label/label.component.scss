@@ -1,7 +1,8 @@
+@import "../../variables.scss";
 .label {
   width: 80%;
   min-height: 5rem;
-  color: white;
+  color: $color-white;
   display: flex;
   margin: auto;
   align-items: center;

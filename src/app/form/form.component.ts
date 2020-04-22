@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
   @Output('onSubmit') submit = new EventEmitter<{}>();
 
   status = ['Present', 'Absent', 'Maybe'];
-  genders = ['male', 'female'];
+  genders = ['Male', 'Female'];
 
   ngOnInit(): void {}
 
